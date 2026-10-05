@@ -1,0 +1,85 @@
+/* The pill is the whole window during a recording, so it sizes itself. */
+.sl-capture-pill {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  gap: var(--sl-space-8);
+  padding: var(--sl-space-8) var(--sl-space-10) var(--sl-space-8) var(--sl-space-16);
+  background: var(--sl-pill);
+  color: var(--sl-pill-ink);
+  font-size: var(--sl-text-md);
+  white-space: nowrap;
+  cursor: grab;
+  user-select: none;
+}
+.sl-rec-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: var(--sl-radius-pill);
+  background: var(--sl-danger);
+  box-shadow: 0 0 0 5px var(--sl-danger-wash);
+  animation: sl-pulse 1.6s ease-in-out infinite;
+}
+.sl-rec-dot.paused {
+  background: var(--sl-pill-ink-faint);
+  box-shadow: 0 0 0 5px var(--sl-pill-hover);
+  animation: none;
+}
+@keyframes sl-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.sl-capture-status {
+  font-weight: 600;
+}
+.sl-capture-count {
+  color: var(--sl-pill-ink-soft);
+}
+.sl-pill-sep {
+  width: 1px;
+  height: 1.1rem;
+  background: var(--sl-pill-line);
+}
+.sl-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sl-space-6);
+  border: none;
+  background: transparent;
+  color: var(--sl-pill-ink);
+  font: inherit;
+  font-weight: 600;
+  padding: var(--sl-space-4) var(--sl-space-8);
+  border-radius: var(--sl-radius-pill);
+  cursor: pointer;
+}
+.sl-pill-btn:hover:not(:disabled) {
+  background: var(--sl-pill-hover);
+}
+.sl-pill-btn-danger {
+  background: var(--sl-danger);
+  color: var(--sl-on-accent);
+  padding: var(--sl-space-4) var(--sl-space-12);
+}
+.sl-pill-btn-danger:hover:not(:disabled) {
+  background: var(--sl-danger-strong);
+}
+.sl-pill-kbd {
+  padding: 1px var(--sl-space-6);
+  border: 1px solid var(--sl-pill-line);
+  border-radius: var(--sl-radius-sm);
+  color: var(--sl-pill-ink-soft);
+  font: inherit;
+  font-size: var(--sl-text-2xs);
+  font-weight: 500;
+}
+.sl-pill-btn-danger .sl-pill-kbd {
+  border-color: var(--sl-on-accent-line);
+  color: inherit;
+}
+

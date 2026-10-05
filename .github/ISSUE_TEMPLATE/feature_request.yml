@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest an idea or a missing capability.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea
+      description: How could Hows solve it? Mockups and examples from other tools welcome.
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Fits the project
+      options:
+        - label: Works locally without an account or network connection.
+          required: true
+        - label: Does not require recording typed text.
+          required: true

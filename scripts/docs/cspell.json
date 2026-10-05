@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "import": ["@cspell/dict-de-de/cspell-ext.json"],
+  "dictionaryDefinitions": [
+    { "name": "project-words", "path": "./project-words.txt", "addWords": true },
+    { "name": "project-words-de", "path": "./project-words.de.txt", "addWords": true }
+  ],
+  "dictionaries": ["project-words"],
+  "languageSettings": [
+    { "languageId": "*", "locale": "de", "dictionaries": ["project-words-de"] }
+  ],
+  "ignoreRegExpList": [
+    "/^ {0,3}(`{3,}|~{3,})[\\s\\S]*?^ {0,3}\\1/gm",
+    "/`[^`\\n]+`/g",
+    "/\\]\\([^)\\s]*\\)/g",
+    "/<!--\\s*(?:\\/?fact|fact-exempt)[^>]*-->/g",
+    "Urls"
+  ],
+  "minWordLength": 3
+}

@@ -1,0 +1,44 @@
+name: Bug report
+description: Something does not work as expected.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      placeholder: |
+        1. Start a recording
+        2. Click …
+        3. Stop and look at step 3
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Hows version or commit
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: "Run `winver`, e.g. Windows 11 24H2 (26100)."
+    validations:
+      required: true
+  - type: input
+    id: displays
+    attributes:
+      label: Displays and scaling
+      placeholder: "e.g. two monitors, 150 % and 100 %"
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot of the step list
+      description: Remove anything confidential before uploading.

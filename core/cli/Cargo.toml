@@ -1,0 +1,22 @@
+[package]
+name = "steps-cli"
+description = "CLI: .steps lesen und als HTML/PDF/Markdown/JSON exportieren, in sieben Sprachen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "steps-cli"
+path = "src/main.rs"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+steps-store = { path = "../store" }
+steps-export = { path = "../export" }
+steps-i18n = { path = "../i18n" }
+
+[lints]
+workspace = true

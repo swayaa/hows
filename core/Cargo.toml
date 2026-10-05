@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = ["capture", "i18n", "session", "export", "store", "cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/swayaa/hows"
+rust-version = "1.88"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[workspace.lints.rust]
+unsafe_code = "allow" # Win32-FFI im capture-Crate benötigt unsafe
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+# Pedantic-Ausnahmen, die für dieses Projekt mehr Rauschen als Nutzen erzeugen:
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"

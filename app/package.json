@@ -1,0 +1,33 @@
+{
+  "name": "hows-app",
+  "private": true,
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swayaa/hows"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node --experimental-strip-types scripts/check-dist.ts",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "check": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
+    "test": "node --experimental-strip-types --test \"src/*.test.ts\""
+  },
+  "dependencies": {
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
+    "@lucide/svelte": "^1.49.0",
+    "@tauri-apps/api": "^2"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5",
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^22.20.4",
+    "svelte": "^5",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5",
+    "vite": "^6"
+  }
+}

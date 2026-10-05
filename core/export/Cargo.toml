@@ -1,0 +1,28 @@
+[package]
+name = "steps-export"
+description = "Markdown-, HTML-, PDF- und JSON-Exporte (SOP- und Bug-Report-Templates)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+steps-i18n = { path = "../i18n" }
+steps-store = { path = "../store" }
+serde.workspace = true
+serde_json.workspace = true
+image = { version = "0.25.6", default-features = false, features = ["png"] }
+font8x8 = "0.3"
+miniz_oxide = "0.8"
+# Liest Glyphen und Maße der eingebetteten Markenschrift (PDF-Export).
+ttf-parser = { version = "0.25", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+# Integrationstests erzeugen synthetische PNGs für Burn-in-Checks.
+image = { version = "0.25.6", default-features = false, features = ["png"] }
+# Unabhängiger Parser prüft, dass der eigene PDF-Writer gültige Dateien schreibt.
+lopdf = "0.42"
+
+[lints]
+workspace = true

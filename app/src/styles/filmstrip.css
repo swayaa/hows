@@ -1,0 +1,137 @@
+/* --- Filmstreifen (primary, above canvas, compact) ---------- --------------- */
+.sl-filmstrip-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sl-space-6);
+}
+.sl-filmstrip-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.sl-filmstrip-meta {
+  margin: 0;
+  font-size: var(--sl-text-xs);
+  color: var(--sl-muted);
+}
+.sl-filmstrip {
+  list-style: none;
+  margin: 0;
+  padding: var(--sl-space-10);
+  display: flex;
+  gap: var(--sl-space-10);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  border-radius: var(--sl-radius-lg);
+  background: var(--sl-film);
+}
+.sl-filmstrip > li {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--sl-space-2);
+  scroll-snap-align: center;
+}
+.sl-filmstrip > li.dragging-source .sl-film-frame {
+  opacity: 0.4;
+}
+.sl-filmstrip > li.drop-before::before,
+.sl-filmstrip > li.drop-after::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--sl-accent-soft);
+  pointer-events: none;
+  z-index: 1;
+}
+.sl-filmstrip > li.drop-before::before {
+  left: calc(-1 * var(--sl-space-6));
+}
+.sl-filmstrip > li.drop-after::after {
+  right: calc(-1 * var(--sl-space-6));
+}
+.sl-film-grip {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: none;
+  border-radius: var(--sl-radius-xs);
+  background: transparent;
+  color: var(--sl-film-ink-faint);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  font-size: var(--sl-text-base);
+  line-height: 1;
+}
+.sl-film-grip:hover:not(:disabled) {
+  color: var(--sl-film-ink-strong);
+  background: var(--sl-film-hover);
+}
+.sl-film-grip:active,
+.sl-film-grip.grabbing {
+  color: var(--sl-film-ink);
+  cursor: grabbing;
+}
+.sl-film-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sl-space-4);
+  padding: var(--sl-space-4);
+  border: 2px solid transparent;
+  border-radius: var(--sl-radius-md);
+  background: transparent;
+  cursor: pointer;
+}
+.sl-film-frame.selected {
+  border-color: var(--sl-accent-soft);
+  background: var(--sl-accent-wash);
+}
+.sl-film-number {
+  font-size: var(--sl-text-2xs);
+  color: var(--sl-film-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.sl-film-thumb {
+  width: 4.6rem;
+  height: 2.9rem;
+  border-radius: var(--sl-radius-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sl-film-hover);
+  border: 1px solid var(--sl-film-line);
+}
+.sl-film-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.sl-film-thumb:has(img.cropped) {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sl-film-thumb img.cropped {
+  max-width: none;
+  object-fit: fill;
+  transform-origin: top left;
+}
+.sl-film-placeholder {
+  width: 60%;
+  height: 60%;
+  border-radius: var(--sl-radius-xs);
+  background: var(--sl-film-line);
+}
+

@@ -1,0 +1,24 @@
+# Rust (Cargo.lock wird für reproduzierbare Builds committet)
+target/
+
+# Node
+node_modules/
+dist/
+.svelte-kit/
+
+# Tauri
+app/src-tauri/gen/schemas/
+
+# Local scratch files and bundles in the repo root
+/_*
+/*.bundle
+.cursor/settings.json
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.playwright-mcp/
+docs/.obsidian/

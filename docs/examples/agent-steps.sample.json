@@ -1,0 +1,20 @@
+{
+  "title": "Netzlaufwerk verbinden (Agent-Demo)",
+  "description": "Beispielskript für steps-cli from-script. Kein Desktop-Capture nötig.",
+  "language": "de",
+  "steps": [
+    {
+      "text": "Öffne den Datei-Explorer (Win+E)."
+    },
+    {
+      "text": "Rechtsklick auf „Dieser PC“ in der linken Navigation."
+    },
+    {
+      "title": "Menü",
+      "text": "Wähle „Netzlaufwerk verbinden…“."
+    },
+    {
+      "text": "Laufwerksbuchstaben wählen, Pfad eingeben und mit „Fertig stellen“ bestätigen."
+    }
+  ]
+}

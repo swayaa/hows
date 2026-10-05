@@ -1,0 +1,20 @@
+{
+  "name": "hows-docs-checks",
+  "private": true,
+  "type": "module",
+  "description": "Checks for the bilingual documentation: language pairs, relative links, spelling, and values that must match the code.",
+  "scripts": {
+    "languages": "node check-languages.mjs",
+    "links": "node check-links.mjs",
+    "spelling": "node check-spelling.mjs",
+    "facts": "node check-facts.mjs",
+    "check": "node check-languages.mjs && node check-links.mjs && node check-spelling.mjs && node check-facts.mjs"
+  },
+  "devDependencies": {
+    "@cspell/dict-de-de": "4.1.2",
+    "cspell": "10.3.6"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

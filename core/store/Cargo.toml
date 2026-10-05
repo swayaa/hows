@@ -1,0 +1,18 @@
+[package]
+name = "steps-store"
+description = "Lesen und Schreiben des .steps-Dateiformats (ZIP-Container mit guide.json und Bildern)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+thiserror.workspace = true
+# Nur Deflate wird benötigt (guide.json); PNGs werden unkomprimiert abgelegt.
+zip = { version = "7.2", default-features = false, features = ["deflate"] }
+
+[lints]
+workspace = true

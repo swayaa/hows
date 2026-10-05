@@ -1,0 +1,17 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "words": { "on": "On", "off": "Off", "or": "or", "and": "and" }
+    },
+    {
+      "code": "de",
+      "label": "Deutsch",
+      "spellingLocales": "de,en",
+      "words": { "on": "An", "off": "Aus", "or": "oder", "and": "und" }
+    }
+  ],
+  "treeRoot": "docs",
+  "excludePrefixes": [".github/"]
+}

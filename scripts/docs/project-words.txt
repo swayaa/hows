@@ -1,0 +1,25 @@
+# Terms valid in every language: product and tool names, formats, key labels.
+# One word per line. Lines starting with # are comments.
+Atkinson
+BCP
+Clippy
+Deutsch
+Español
+Folge
+Français
+Hows
+Hyperlegible
+Italiano
+LZMA
+Lucide
+MHT
+Nederlands
+NSIS
+ODT
+Português
+SCORM
+SIL
+Strg
+subfolders
+Tauri
+WCAG

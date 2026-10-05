@@ -1,0 +1,43 @@
+/* --- Confirm dialog, replaces the browser confirm() -------------------------- */
+.sl-confirm {
+  width: min(26rem, calc(100vw - 2rem));
+  padding: var(--sl-space-20) var(--sl-space-22);
+  border: 1px solid var(--sl-line);
+  border-radius: var(--sl-radius-lg);
+  background: var(--sl-elev);
+  color: var(--sl-ink);
+  box-shadow: var(--sl-shadow-float);
+  font-family: var(--sl-font-ui);
+}
+.sl-confirm::backdrop {
+  background: var(--sl-scrim);
+}
+.sl-confirm-body {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sl-space-12);
+}
+.sl-confirm-icon {
+  margin-top: var(--sl-space-2);
+  color: var(--sl-danger);
+}
+.sl-confirm-message {
+  margin: 0;
+  font-size: var(--sl-text-base);
+  line-height: 1.45;
+}
+.sl-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sl-space-10);
+  margin-top: var(--sl-space-20);
+}
+.sl-btn-danger {
+  background: transparent;
+  border-color: var(--sl-danger);
+  color: var(--sl-danger);
+}
+.sl-btn-danger:hover:not(:disabled) {
+  background: var(--sl-danger-soft);
+  border-color: var(--sl-danger-strong);
+}

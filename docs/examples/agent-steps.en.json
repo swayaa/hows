@@ -1,0 +1,20 @@
+{
+  "title": "Map a network drive",
+  "description": "Example script for steps-cli from-script. No desktop capture needed.",
+  "language": "en",
+  "steps": [
+    {
+      "text": "Open File Explorer (Win+E)."
+    },
+    {
+      "text": "Right-click \"This PC\" in the left navigation pane."
+    },
+    {
+      "title": "Menu",
+      "text": "Choose \"Map network drive…\"."
+    },
+    {
+      "text": "Pick a drive letter, enter the folder path and confirm with \"Finish\"."
+    }
+  ]
+}

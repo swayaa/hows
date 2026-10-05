@@ -1,0 +1,25 @@
+# German terms the German dictionary lacks, mostly compounds the app uses.
+# One word per line. Lines starting with # are comments.
+abgekündigt
+Abkündigung
+angehakt
+Anleitungsdatei
+Anleitungsmodus
+Anleitungsordner
+codesigniert
+dunkelt
+Fehlerberichtsmodus
+Fokusrahmen
+gescrollt
+Markierungsleiste
+Modifikatortaste
+Remotedesktops
+Repositorys
+rechtsklicken
+Screenreader
+Scrollrichtung
+sprachneutralen
+Stilvorlage
+Stilvorlagen
+ungespeicherten
+verpixelt

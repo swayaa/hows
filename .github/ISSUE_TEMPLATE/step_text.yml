@@ -1,0 +1,39 @@
+name: Step text reads wrong
+description: A recorded step has a confusing, generic or wrong description.
+labels: [step-text]
+body:
+  - type: input
+    id: actual
+    attributes:
+      label: Generated text
+      placeholder: "Click “Pane” in “Explorer”"
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: What it should say
+      placeholder: "Click “This PC” in “Explorer”"
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: Application and version
+      placeholder: "e.g. File Explorer on Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: element
+    attributes:
+      label: Element data
+      description: |
+        The step's `element` block from `guide.json` (open the `.steps` file as a ZIP), or the step from
+        `steps-cli export guide.steps --format json --mode bug-report -o report.json`.
+        Remove window titles or names that are confidential.
+      render: json
+  - type: dropdown
+    id: language
+    attributes:
+      label: Guide language
+      options: [English, German, French, Spanish, Italian, Portuguese (Brazil), Dutch]

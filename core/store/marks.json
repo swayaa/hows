@@ -1,0 +1,30 @@
+{
+  "color": "#E11D48",
+  "extra_colors": ["#2563EB", "#16A34A", "#CA8A04", "#0F172A", "#FFFFFF"],
+  "stroke": 2.5,
+  "pen_factor": 1.2,
+  "highlight_color": "#FDE047",
+  "highlight_opacity": 0.4,
+  "text_size": 14,
+  "blur_outline": "#64748B",
+  "arrow_head": { "per_stroke": 4, "min": 8, "max": 18, "width": 0.55 },
+  "text_box": { "char_width": 0.55, "line_height": 1.2 },
+  "text_resize": { "drag_width": 0.12, "min": 10, "max": 48 },
+  "text_halo": { "color": "#FFFFFF", "opacity": 0.7 },
+  "blur_block": { "per_side": 6, "min": 8, "max": 24 },
+  "why": {
+    "color": "Standard der Einstellung annotation_color und erste Farbe im Markieren. Kräftiges Rot hebt sich von den meisten Oberflächen ab. Der Export zeichnet damit auch Markierungen, deren gespeicherte Farbe ungültig ist.",
+    "extra_colors": "Weitere Farben im Markieren: Blau, Grün, Ocker, fast Schwarz und Weiß. Mit dem Rot reichen sie für helle und dunkle Screenshots.",
+    "stroke": "Standard der Einstellung annotation_stroke, Linienbreite von Rechteck, Pfeil und Kreis in Bildpixeln.",
+    "pen_factor": "Freihandlinien bestehen aus kurzen Segmenten und wirken bei gleicher Breite dünner als gerade Kanten. Der Stift zeichnet deshalb 1,2-mal so breit wie die Einstellung, beim Standard 2,5 also 3 px.",
+    "highlight_color": "Textmarker-Gelb, solange im Markieren keine andere Farbe gewählt ist.",
+    "highlight_opacity": "40 % Deckkraft lässt den markierten Text lesbar.",
+    "text_size": "Beschriftung in Bildpixeln, etwa so groß wie Windows-Oberflächentext bei 100 % Skalierung.",
+    "blur_outline": "Gestrichelter Rahmen des Weichzeichners, nur beim Bearbeiten sichtbar und nie exportiert. Schiefergrau bleibt auf hellen und dunklen Screenshots erkennbar.",
+    "arrow_head": "Die Pfeilspitze ist per_stroke-mal so lang wie die Linie breit, aber mindestens min und höchstens max Pixel: bei dünnen Linien sichtbar, bei dicken nicht klobig. Die halbe Breite ist width-mal die Länge.",
+    "text_box": "Geschätzte Fläche einer Beschriftung zum Anklicken und für den Ziehpunkt: ein Zeichen ist char_width-mal so breit wie die Textgröße, eine Zeile line_height-mal so hoch. Das entspricht einer serifenlosen Schrift mit normalem Zeilenabstand.",
+    "text_resize": "Ziehen am Ziehpunkt einer Beschriftung skaliert die Textgröße: drag_width ist die Breite (Anteil am Bild), bei der die Standardgröße erreicht ist. Die Größe bleibt zwischen min und max Pixeln, darunter unleserlich, darüber größer als jede Fensterüberschrift.",
+    "text_halo": "Heller Rand um exportierte Beschriftungen, damit sie auf dunklen und unruhigen Screenshots lesbar bleiben. 70 % Deckkraft lassen den Hintergrund noch durchscheinen.",
+    "blur_block": "Der Weichzeichner im Export mittelt Blöcke: die kürzere Seite der Fläche durch per_side, mindestens min und höchstens max Pixel. Kleine Flächen bleiben unkenntlich, große werden nicht grob gekachelt."
+  }
+}

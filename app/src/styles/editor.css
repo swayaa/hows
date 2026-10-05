@@ -1,0 +1,143 @@
+/* --- Editor (Filmstreifen primary, canvas hero) ---------- ------------------ */
+.sl-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sl-space-20);
+}
+.sl-editor-bar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  column-gap: var(--sl-space-12);
+  row-gap: var(--sl-space-4);
+  align-items: center;
+  padding-bottom: var(--sl-space-14);
+  border-bottom: 1px solid var(--sl-line);
+}
+.sl-editor-bar > .sl-back { grid-column: 1; grid-row: 1; }
+.sl-editor-bar > .sl-title-input { grid-column: 2; grid-row: 1; }
+.sl-editor-bar > .sl-title-prompt { grid-column: 2; grid-row: 2; }
+.sl-editor-bar > .sl-annotate-toggle { grid-column: 3; grid-row: 1; }
+.sl-editor-bar > .sl-editor-export { grid-column: 4; grid-row: 1; }
+.sl-title-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  font: inherit;
+  font-size: var(--sl-text-lg);
+  font-weight: 600;
+  padding: var(--sl-space-4) var(--sl-space-6);
+  border: 1px solid transparent;
+  border-radius: var(--sl-radius-sm);
+  background: transparent;
+  color: var(--sl-ink);
+}
+.sl-title-input:hover,
+.sl-title-input:focus-visible {
+  border-color: var(--sl-line);
+  background: var(--sl-elev);
+}
+.sl-title-prompt {
+  margin: 0;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-muted);
+}
+.sl-annotate-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sl-space-8);
+  font: inherit;
+  font-size: var(--sl-text-base);
+  font-weight: 600;
+  padding: var(--sl-space-8) var(--sl-space-14);
+  border-radius: var(--sl-radius-pill);
+  border: 1px solid var(--sl-line);
+  background: var(--sl-elev);
+  color: var(--sl-ink);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.sl-annotate-toggle.active {
+  background: var(--sl-accent-soft);
+  border-color: var(--sl-accent);
+  color: var(--sl-accent);
+}
+
+.sl-editor-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sl-space-16);
+}
+.sl-stage-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sl-space-10);
+}
+.sl-step-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sl-space-12);
+  width: 100%;
+}
+.sl-step-label {
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  font-size: var(--sl-text-base);
+  font-weight: 600;
+  color: var(--sl-ink);
+}
+.sl-step-text {
+  width: 100%;
+  max-width: 46rem;
+}
+.sl-annotate-micro {
+  margin: 0;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-accent);
+}
+.sl-stage-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sl-space-10);
+  max-width: 100%;
+}
+
+.sl-detail-tools {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: var(--sl-space-8);
+}
+.sl-detail-tools .sl-btn-danger-text .sl-icon {
+  width: 1em;
+  height: 1em;
+}
+.sl-action-chip {
+  padding: var(--sl-space-4) var(--sl-space-10);
+  border: 1px solid var(--sl-line);
+  border-radius: var(--sl-radius-pill);
+  background: var(--sl-elev);
+  color: var(--sl-muted);
+  font-size: var(--sl-text-xs);
+}
+.sl-hint {
+  margin: 0;
+  color: var(--sl-muted);
+  font-size: var(--sl-text-md);
+}
+
+/* --- Empty editor ------------------------------------------------------------- */
+.sl-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sl-space-16);
+  max-width: 34rem;
+  margin-top: var(--sl-space-16);
+}
+
