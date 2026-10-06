@@ -111,9 +111,9 @@ pub fn civil_from_days(days_since_epoch: i64) -> (i64, u32, u32) {
     let doe = z - era * 146_097;
     let yoe = (doe - doe / 1460 + doe / 36_524 - doe / 146_096) / 365;
     let year = yoe + era * 400;
-    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
-    let mp = (5 * doy + 2) / 153;
-    let day = doy - (153 * mp + 2) / 5 + 1;
+    let year_day = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * year_day + 2) / 153;
+    let day = year_day - (153 * mp + 2) / 5 + 1;
     let month = if mp < 10 { mp + 3 } else { mp - 9 };
     let year = if month <= 2 { year + 1 } else { year };
     #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss)]

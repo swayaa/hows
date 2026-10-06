@@ -106,7 +106,9 @@ pub struct Crop {
 impl Crop {
     /// Klemmt das Fenster ins Bild. Das ganze Bild wird `None`.
     /// Nicht-endliche Zahlen sind ein Fehler.
+    #[allow(clippy::result_unit_err)]
     pub fn normalized(self) -> Result<Option<Self>, ()> {
+        const MIN: f64 = 0.02;
         if ![self.x, self.y, self.w, self.h]
             .into_iter()
             .all(f64::is_finite)
@@ -115,7 +117,6 @@ impl Crop {
         }
         let (mut x, mut w) = non_negative_span(self.x, self.w);
         let (mut y, mut h) = non_negative_span(self.y, self.h);
-        const MIN: f64 = 0.02;
         w = w.clamp(MIN, 1.0);
         h = h.clamp(MIN, 1.0);
         x = x.clamp(0.0, 1.0 - w);

@@ -56,9 +56,7 @@ fn crop_png(png: &[u8], crop: Crop) -> Vec<u8> {
     let width_f = f64::from(width);
     let height_f = f64::from(height);
     let x = (crop.x * width_f).round().clamp(0.0, width_f - 1.0) as u32;
-    let y = (crop.y * height_f)
-        .round()
-        .clamp(0.0, height_f - 1.0) as u32;
+    let y = (crop.y * height_f).round().clamp(0.0, height_f - 1.0) as u32;
     let right = ((crop.x + crop.w) * width_f)
         .round()
         .clamp(f64::from(x + 1), width_f) as u32;
@@ -84,9 +82,7 @@ fn remap_overlay(overlay: &Overlay, crop: Crop) -> Overlay {
             *w /= crop.w;
             *h /= crop.h;
         }
-        Overlay::Arrow {
-            x1, y1, x2, y2, ..
-        } => {
+        Overlay::Arrow { x1, y1, x2, y2, .. } => {
             *x1 = (*x1 - crop.x) / crop.w;
             *y1 = (*y1 - crop.y) / crop.h;
             *x2 = (*x2 - crop.x) / crop.w;
