@@ -8,7 +8,7 @@ Hows builds are not code-signed yet. Microsoft Defender SmartScreen warns about 
 
 SmartScreen does not know who published the file. It does not mean that a virus was found. Still, only run files you trust:
 
-- Download Hows only from this repository, either from the **Release** workflow artifacts or from the **Releases** page. See [Install Hows](install.md#download).
+- Download Hows only from the [Releases](https://github.com/swayaa/hows/releases) page of this repository. See [Install Hows](install.md#download).
 - If you prefer not to trust a prebuilt file, [build Hows yourself](../../README.md#build).
 
 ## Start Hows anyway
@@ -19,7 +19,7 @@ SmartScreen does not know who published the file. It does not mean that a virus 
 
 ## If the file is blocked
 
-Windows marks files downloaded from the internet. If the ZIP from the artifact or its files are blocked:
+Windows marks files downloaded from the internet. If a downloaded ZIP or its files are blocked:
 
 1. Right-click the downloaded ZIP and choose **Properties**.
 2. On the **General** tab, select **Unblock** and click **OK**.

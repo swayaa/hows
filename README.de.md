@@ -39,7 +39,7 @@ Quellen: [Microsoft zur Abkündigung der Schrittaufzeichnung](https://support.mi
 
 ## Installieren
 
-Es gibt noch kein signiertes Release. Bis dahin baust du Hows selbst (siehe unten) oder lädst unter *Actions* das Artefakt `windows-installers` aus einem Lauf des Workflows **Release** herunter. Windows SmartScreen warnt vor dem unsignierten Installer.
+Hows 0.1.0 ist ein frühes Alpha. Lade es von der Seite [Releases](https://github.com/swayaa/hows/releases) herunter. Die Builds sind unsigniert, deshalb warnt Windows SmartScreen beim ersten Start. Du kannst Hows auch selbst bauen (siehe unten).
 
 - [Hows installieren](docs/de/install.md): welche Datei du nimmst, WebView2, Updates und Deinstallation.
 - [Die SmartScreen-Warnung](docs/de/smartscreen.md): warum sie erscheint und wie du weitermachst.

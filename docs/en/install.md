@@ -6,25 +6,23 @@ Hows runs on Windows 10 and Windows 11.
 
 ## Download
 
-There is no signed release yet. The Windows builds come from the **Release** workflow of this repository:
+Hows 0.1.0 is an early alpha. The builds are unsigned, so Windows SmartScreen warns on first start. [The SmartScreen warning](smartscreen.md) explains why and how to continue.
 
-1. Open the **Actions** tab and select the **Release** workflow.
-2. Open a successful run and download the `windows-installers` artifact under **Artifacts**. It is a ZIP file.
-3. Extract the ZIP.
-
-Once a version is published, its entry on the **Releases** page includes the same files.
-
-Windows SmartScreen warns about the unsigned files on first start. [The SmartScreen warning](smartscreen.md) explains why and how to continue.
+Download Hows from the [Releases](https://github.com/swayaa/hows/releases) page. For most people, the setup program is the right file. Later releases are listed on that same page.
 
 ## Choose a file
 
-The artifact holds the installer, the MSI, the portable ZIP, and `wix-UIExtension-wix3141rtm.zip`. You need one of the first three. If you pass the MSI on, keep the WiX archive with it. It is the source of the WiX dialogs and their license, not a way to install Hows.
+The 0.1.0 release includes these files:
 
 | File | Best for |
 |---|---|
-| Installer ending in `-setup.exe` | Most people. Installs Hows for you and registers `.steps` files, so a double-click opens them in Hows. |
-| Package ending in `.msi` | Deploying to many PCs with software distribution tools. Also registers `.steps` files. |
-| `Hows_*_x64-portable.zip` | Portable use without installing. It contains `hows.exe`, `LICENSE`, and `THIRD-PARTY-NOTICES.md`. It does not register `.steps` files. |
+| `Hows_0.1.0_x64-setup.exe` | Most people. Installs Hows for you and registers `.steps` files, so a double-click opens them in Hows. |
+| `Hows_0.1.0_x64_en-US.msi` | Installing on many PCs with software distribution tools. Also registers `.steps` files. |
+| `Hows_0.1.0_x64-portable.zip` | Use without installing. It contains `hows.exe`, `LICENSE`, and `THIRD-PARTY-NOTICES.md`. It does not register `.steps` files. |
+
+`wix-UIExtension-wix3141rtm.zip` is the source and license of the WiX dialogs that accompany the MSI. It is not an installer. Most people do not need it. If you pass the MSI on, keep that archive with it.
+
+A successful run of the **Release** workflow also uploads a `windows-installers` artifact. That ZIP is a CI build. It is not the download for normal use.
 
 ## WebView2
 

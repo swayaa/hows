@@ -6,25 +6,23 @@ Hows läuft unter Windows 10 und Windows 11.
 
 ## Herunterladen
 
-Es gibt noch kein signiertes Release. Die Windows-Builds kommen aus dem Workflow **Release** dieses Repositorys:
+Hows 0.1.0 ist ein frühes Alpha. Die Builds sind unsigniert, deshalb warnt Windows SmartScreen beim ersten Start. [Die SmartScreen-Warnung](smartscreen.md) erklärt, warum, und wie du weitermachst.
 
-1. Öffne den Tab **Actions** und wähle den Workflow **Release**.
-2. Öffne einen erfolgreichen Lauf und lade unter **Artifacts** das Artefakt `windows-installers` herunter. Es ist eine ZIP-Datei.
-3. Entpacke die ZIP-Datei.
-
-Sobald eine Version veröffentlicht ist, findest du dieselben Dateien auch in ihrem Eintrag auf der Seite **Releases**.
-
-Beim ersten Start warnt Windows SmartScreen vor den unsignierten Dateien. [Die SmartScreen-Warnung](smartscreen.md) erklärt, warum, und wie du weitermachst.
+Lade Hows von der Seite [Releases](https://github.com/swayaa/hows/releases) herunter. Für die meisten ist das Setup-Programm die richtige Datei. Spätere Versionen stehen auf derselben Seite.
 
 ## Die passende Datei wählen
 
-Das Artefakt enthält den Installer, das MSI, das portable ZIP und `wix-UIExtension-wix3141rtm.zip`. Du brauchst eine der ersten drei Dateien. Gibst du das MSI weiter, bleibt das WiX-Archiv dabei. Es ist die Quelle der WiX-Dialoge und ihrer Lizenz, kein Weg, Hows zu installieren.
+Das Release 0.1.0 enthält diese Dateien:
 
 | Datei | Geeignet für |
 |---|---|
-| Installer mit der Endung `-setup.exe` | Die meisten. Installiert Hows für dich und meldet `.steps`-Dateien an, damit ein Doppelklick sie in Hows öffnet. |
-| Paket mit der Endung `.msi` | Verteilung in Firmen mit Softwareverteilung. Meldet `.steps`-Dateien ebenfalls an. |
-| `Hows_*_x64-portable.zip` | Portable Nutzung ohne Installation. Es enthält `hows.exe`, `LICENSE` und `THIRD-PARTY-NOTICES.md`. Es meldet `.steps`-Dateien nicht an. |
+| `Hows_0.1.0_x64-setup.exe` | Die meisten. Installiert Hows für dich und meldet `.steps`-Dateien an, damit ein Doppelklick sie in Hows öffnet. |
+| `Hows_0.1.0_x64_en-US.msi` | Installation auf vielen PCs mit Softwareverteilung. Meldet `.steps`-Dateien ebenfalls an. |
+| `Hows_0.1.0_x64-portable.zip` | Nutzung ohne Installation. Es enthält `hows.exe`, `LICENSE` und `THIRD-PARTY-NOTICES.md`. Es meldet `.steps`-Dateien nicht an. |
+
+`wix-UIExtension-wix3141rtm.zip` ist die Quelle und die Lizenz der WiX-Dialoge, die zum MSI gehören. Sie ist kein Installer. Die meisten brauchen sie nicht. Gibst du das MSI weiter, bleibt das Archiv dabei.
+
+Ein erfolgreicher Lauf des Workflows **Release** legt außerdem das Artefakt `windows-installers` ab. Diese ZIP-Datei ist ein CI-Build. Sie ist nicht der Download für den normalen Gebrauch.
 
 ## WebView2
 

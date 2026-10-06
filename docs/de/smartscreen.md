@@ -8,7 +8,7 @@ Hows-Builds sind noch nicht codesigniert. Microsoft Defender SmartScreen warnt v
 
 SmartScreen weiß nicht, wer die Datei veröffentlicht hat. Das heißt nicht, dass ein Virus gefunden wurde. Starte trotzdem nur Dateien, denen du vertraust:
 
-- Lade Hows nur aus diesem Repository herunter, entweder aus den Artefakten des Workflows **Release** oder von der Seite **Releases**. Siehe [Hows installieren](install.md#herunterladen).
+- Lade Hows nur von der Seite [Releases](https://github.com/swayaa/hows/releases) dieses Repositorys herunter. Siehe [Hows installieren](install.md#herunterladen).
 - Wenn du einer fertigen Datei nicht vertrauen willst, [baue Hows selbst](../../README.de.md#bauen).
 
 ## Hows trotzdem starten
@@ -19,7 +19,7 @@ SmartScreen weiß nicht, wer die Datei veröffentlicht hat. Das heißt nicht, da
 
 ## Wenn die Datei blockiert ist
 
-Windows markiert Dateien, die aus dem Internet kommen. Sind die ZIP-Datei aus dem Artefakt oder ihre Dateien blockiert:
+Windows markiert Dateien, die aus dem Internet kommen. Ist eine heruntergeladene ZIP-Datei oder eine Datei darin blockiert:
 
 1. Klick mit der rechten Maustaste auf die heruntergeladene ZIP-Datei und wähle **Eigenschaften**.
 2. Setz auf dem Tab **Allgemein** den Haken bei **Zulassen** und klick auf **OK**.

@@ -39,7 +39,7 @@ Sources: [Microsoft on the Steps Recorder deprecation](https://support.microsoft
 
 ## Install
 
-There is no signed release yet. Until then, build it yourself (below) or download the `windows-installers` artifact from a run of the **Release** workflow under *Actions*. Windows SmartScreen warns about the unsigned installer.
+Hows 0.1.0 is an early alpha. Download it from the [Releases](https://github.com/swayaa/hows/releases) page. The builds are unsigned, so Windows SmartScreen warns on first start. You can also build Hows yourself (below).
 
 - [Install Hows](docs/en/install.md): which file to pick, WebView2, updates, and removal.
 - [The SmartScreen warning](docs/en/smartscreen.md): why it appears and how to continue.
