@@ -6,6 +6,8 @@
 
 Hows nimmt auf, was du anklickst, und macht daraus eine bebilderte Schritt-für-Schritt-Anleitung. Es ist ein moderner Open-Source-Nachfolger der Windows-Schrittaufzeichnung (`psr.exe`), die Microsoft abgekündigt hat.
 
+![Hows nimmt drei Schritte auf und öffnet die Anleitung](docs/readme.gif)
+
 Hows braucht kein Konto und sendet keine Telemetrie. Nach der Installation baut die laufende App keine Netzwerkverbindungen auf. Die NSIS- und MSI-Installer laden WebView2 von Microsoft, wenn es fehlt. Hows lädt Anleitungen nicht in eine Hows-Cloud hoch; ein Ordner, den OneDrive oder etwas Ähnliches synchronisiert, kann Dateien, die du dort speicherst, trotzdem kopieren. Getippte Zeichen werden nicht als Tastatureingabe gespeichert, nur dass du getippt hast und wo. Anleitungen werden in einem offenen, dokumentierten `.steps`-Format gespeichert. Die App exportiert sie als einzelne HTML-Datei oder als PDF; die Kommandozeile ergänzt Markdown und JSON, entweder als saubere Anleitung oder als Fehlerbericht mit technischen Metadaten.
 
 Zuerst für Windows. Gebaut mit Tauri 2, Rust und Svelte 5. MIT-lizenziert.

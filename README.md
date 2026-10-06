@@ -6,6 +6,8 @@ English | [Deutsch](README.de.md)
 
 Hows records what you click and turns it into an illustrated step-by-step guide. It is a modern, open-source successor to the Windows Steps Recorder (`psr.exe`), which Microsoft has deprecated.
 
+![Hows records three clicks and opens the guide](docs/readme.gif)
+
 Hows needs no account and sends no telemetry. After install, the running app does not open network connections. The NSIS and MSI installers download WebView2 from Microsoft when it is missing. Hows does not upload guides to a Hows cloud; a folder synced by OneDrive or similar can still copy files you save there. Typed characters are not stored as keyboard input, only the fact that you typed and where. Guides are saved in an open, documented `.steps` format. The app exports them as a single HTML file or a PDF; the command line adds Markdown and JSON, either as a clean how-to guide or as a bug report with technical metadata.
 
 Windows first. Built with Tauri 2, Rust, and Svelte 5. MIT licensed.
